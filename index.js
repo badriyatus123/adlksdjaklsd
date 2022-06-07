@@ -19,7 +19,7 @@ const connectToWhatsApp = async () => {
         printQRInTerminal: true,
         logger: logg({ level: 'fatal' }),
         auth: state,
-        browser: ["Jojo-Bot", "Safari", "3.0"]
+        browser: ["Manzip", "Safari", "3.0"]
     })
     conn.ev.on('connection.update', (update) => {
         const { connection, lastDisconnect } = update
