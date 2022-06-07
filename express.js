@@ -4,7 +4,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 module.exports = function (conn) {
-  app.post('/', async (req, res) => {
+  app.get('/', (req, res) => res.send('Home Page Route'));
+  app.post('/msg', async (req, res) => {
     const { number, message } = req.body
     if (!number || !message) {
       res.send({status: 'failed', error:'number and message are required'})
